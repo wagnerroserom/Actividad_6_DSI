@@ -135,8 +135,65 @@
                 padding: 0.3rem 0.7rem;
             }
 
+            /*SE ALINEA TODO EL CONTENIDO A LA IZQUIERDA*/
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 60px;
+                margin-right: 0;
+                text-align: left;
+            }
+            
+            .timeline-content {
+                padding: 1rem;
+                border-left: 3px solid #1e3c72;
+            }
+            
+            .timeline-title {
+                font-size: 1rem;
+            }
+            
+            .timeline-description {
+                font-size: 0.9rem;
+            }
+        }
 
+        /*RESPONSIVE DESIGN - MÓVILES PEQUEÑOS*/
+        @media (max-width: 480px) {
+            .container {
+                padding: 1rem;
+                margin: 10px;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 45px;
+            }
+            
+            .timeline-content {
+                padding: 0.8rem;
+            }
+            
+            .timeline-year {
+                font-size: 0.7rem;
+                padding: 0.2rem 0.5rem;
+            }
+        }
 
+                .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .header h1 {
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        /*HASTA AQUÍ EL BLOQUE DE SOLUCIÓN*/
     </style>
 </head>
 <body>
