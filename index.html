@@ -64,6 +64,77 @@
             border-left: 4px solid #1e3c72;
         }
 
+        .timeline-year {
+            background: #1e3c72;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.9rem;
+            z-index: 10;
+            top: 1rem;
+        }
+
+        .timeline-title {
+            color: #1e3c72;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .timeline-description {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 1rem;
+            width: 12px;
+            height: 12px;
+            background: #1e3c72;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 5;
+            border: 3px solid white;
+        }
+
+        /*ANIMACIÓN DE APARICIÓN*/
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /*RESPONSIVE DESIGN - ADAPTACIÓN PARA MÓVILES*/
+        @media (max-width: 768px) {
+            /* En móvil, timeline vertical simple */
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item::before {
+                left: 20px;
+            }
+            
+            .timeline-year {
+                left: 20px;
+                font-size: 0.8rem;
+                padding: 0.3rem 0.7rem;
+            }
+
 
 
     </style>
